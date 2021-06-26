@@ -1,0 +1,30 @@
+{
+  "name": "dbot",
+  "version": "1.0.0",
+  "description": "bot",
+  "main": "main.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "self-reload-json": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/register": "^7.14.5"
+  },
+  "scripts": {
+    "test": "dy!test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwanne56/dbot.git"
+  },
+  "author": "rretroactively",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nwanne56/dbot/issues"
+  },
+  "homepage": "https://github.com/nwanne56/dbot#readme"
+}

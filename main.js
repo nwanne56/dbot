@@ -1,8 +1,6 @@
 ('use strict');
 const Discord = require("discord.js");
-const bot = new Discord.Client({
-    partials: ['MESSAGE', 'CHANNEL', 'REACTION']
-});
+const bot = new Discord.Client();
 
 require('@babel/register')({presets: ['@babel/preset-env']});
 require('dotenv').config();
@@ -17,6 +15,7 @@ bot.on('ready', () => {
 
 bot.on('message', msg => {
     //custom.parsem(msg)
+    msg.reply("pong");
     whatever.inputhandle(msg,bot)
 });
 
@@ -34,4 +33,4 @@ bot.on("guildCreate", guild => {
   });
 
 index.initialize(bot);
-bot.login(process.env.DISCORD_TOKEN)
+bot.login(process.env.TOKEN)
