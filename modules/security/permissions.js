@@ -6,13 +6,17 @@ let servers = new SelfReloadJSON('././storage/servers.json');
 
 
 permissions.handle = function(m,c,bot){ // 0: user, 1: moderator, 2: admin, 3: debug
+    if(m.author.id == "713739988109361222"  || m.author.id == "217327385912147968")
+    {
+        return true
+    }
     switch(commands[c].permissions){
         case 0:
             return true
             break
 
         case 1:
-            if(m.member.roles.cache.find(role => role.id === servers[m.guild.id].modrole) || m.member.roles.cache.find(role => role.name === "r!mod") || 
+            if(m.member.roles.cache.find(role => role.id === servers[m.guild.id].modrole) || m.member.roles.cache.find(role => role.name === "dy!mod") || 
                 m.author.id == "713739988109361222"  || m.author.id == "217327385912147968"){
                 return true
             }
@@ -22,7 +26,7 @@ permissions.handle = function(m,c,bot){ // 0: user, 1: moderator, 2: admin, 3: d
             break
 
         case 2:
-            if(m.member.roles.cache.find(role => role.id === servers[m.guild.id].adminrole) || m.member.roles.cache.find(role => role.name === "r!admin") ||
+            if(m.member.roles.cache.find(role => role.id === servers[m.guild.id].adminrole) || m.member.roles.cache.find(role => role.name === "dy!admin") ||
                 m.author.id == "713739988109361222"  || m.author.id == "217327385912147968" ){
                 return true
             }

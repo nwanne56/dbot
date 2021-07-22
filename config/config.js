@@ -1,12 +1,6 @@
 let config = {}
+config.modules = ["basic","fun"];
+config.exclude = ["index.js", "handler.js", "permissions.js"];
 config.prefix = "dy!";
-config.basic = {
-    "server": {
-        "prefix": "dy!",
-        "customenabled": false,
-        "custom": [{ 
-            "test" : { "text": "this is a test" }
-        }]
-    }
-}
+
 export {config}

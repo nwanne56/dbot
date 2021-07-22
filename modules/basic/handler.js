@@ -9,12 +9,13 @@ var regeratorRuntime = require('regenerator-runtime')
 
 let whatever = {};
 whatever.inputhandle = async function(m,bot){
-    if(m.author.id===bot.id){return}
-    if(m.channel.type != "text") {return}
+    if(m.author.id===bot.id || m.channel.type != "text")
+      {return}
+    
     var command = m.content.split(" ")[0].slice(config.prefix.length);
     var params = m.content.split(" ").slice(1);
     if(m.content.startsWith(config.prefix)){
-       if(!commands[command]){ console.log('wtf'); return}
+       if(!commands[command]){console.log('that command doesnt exist'); return}
        if(!permissions.handle(m,command,bot)){ m.reply('no permissions'); return}
        commands[command].function(m,params,bot);
     }

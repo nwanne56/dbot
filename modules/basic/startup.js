@@ -4,7 +4,7 @@ var fs = require('fs')
 let servers = new SelfReloadJSON('././storage/servers.json');
 
 
-starup.setup = {
+startup.setup = {
     description: "No description",
   permissions: 2,
   function: async function(m,bot){
@@ -30,7 +30,7 @@ starup.setup = {
             let modrole = serv.roles.fetch(678425668026892347);
             let adminrole = serv.roles.fetch(720454075807695021);
 
-        let base = `{ "prefix": "r!", "modrole": "${modrole.id}", "adminrole": "${adminrole.id}", "vip": false, "eventrole": "", "geventrole": "" }`;
+        let base = `{ "prefix": "dy!", "modrole": "${modrole.id}", "adminrole": "${adminrole.id}", "vip": false, "eventrole": "", "geventrole": "" }`;
         fs.readFile("././storage/servers.json", function (err, data) {
             var asfg = JSON.parse(data)
             asfg[serv.id] = JSON.parse(base)

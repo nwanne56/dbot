@@ -1,6 +1,8 @@
 var fs = require('fs');
+import {config} from '../../config/config.js'
 
-let modules = ["fun","basic"]
+
+let modules = config.modules
 
 let index = {}
 
@@ -21,6 +23,7 @@ index.initialize = function(v){
                         let command = Object.keys(reqfile[zzz])[l];
                         let commandvalue = reqfile[zzz][command];
                         commands[command]=commandvalue;
+                        console.log("command: " + command);
                    }
                 })
             })
